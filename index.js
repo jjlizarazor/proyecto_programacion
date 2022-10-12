@@ -9,6 +9,24 @@
       alert("Verifique sus credenciales");
     }
   }
+
+import { teatros, teatros } from "./teatros";
+
+const disponibilidadTeatros = Object.keys(teatros);
+const targetTeatro = prompt(`¿En que cinema desea alquirir su boleta? ${disponibilidadTeatros}`);
+
+if (disponibilidadTeatros.includes(targetTeatro)) {
+const quantityAsText = prompt("¿Cuántas boletas quiere?");
+const quantity = parseInt(quantityAsText);
+const teatros = teatros[targetTeatro];
+
+const total = teatros.unitPriceGeneral * quantity;
+//const label = quantity > 1 ? teatros.pluralLabel : teatros.label;
+
+alert(`El precio a pagar por ${quantity} es: $ ${total}`);
+} else {
+alert("Cinema incorrecto");
+}
   /*
   function Login() {
     var done = 0;
