@@ -27,6 +27,7 @@ alert(`El precio a pagar por ${quantity} es: $ ${total}`);
 } else {
 alert("Cinema incorrecto");
 }
+
   /*
   function Login() {
     var done = 0;
