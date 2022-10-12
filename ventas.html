@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "https://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <title>Registro de ventas</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script>
+      function algoritmo() {
+        let clientes_atendidos;
+        let total_de_la_compra, total_de_ventas;
+        total_de_la_compra = parseFloat(
+          document.formulario1.total_de_la_compra.value
+        );
+        total_de_ventas = total_de_ventas + total_de_la_compra;
+        clientes_atendidos = clientes_atendidos + 1;
+        alert(clientes_atendidos);
+      }
+    </script>
+  </head>
+  <body>
+    <form name="formulario1">
+      <table style="text-align: left; margin-left: auto; margin-right: auto;">
+        <tbody>
+          <tr>
+            <td>
+              <label for="total_de_la_compra"
+                >Ingresa el valor de total de la compra:</label
+              >
+            </td>
+            <td>
+              <input
+                name="total_de_la_compra"
+                required="required"
+                step="0.000001"
+                type="number"
+              />
+            </td>
+          </tr>
+          <tr align="center">
+            <td colspan="2" rowspan="1">
+              <input value="Procesar" type="button" onclick="algoritmo();" />
+              <input type="reset" />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+  </body>
+</html>
