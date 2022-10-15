@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    <title>Registro de ventas</title>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <br>
+    <div class="container">
+      <br><br>
+      <div class="row">
+        <div class="col-sm-4">
+          <table class="table">
+              <thead>
+                <tr>
+                  <th>Teatro</th>
+                  <th>Precio Unidad</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Imperial</td>
+                  <td>$ 8000</td>
+                </tr>
+                <tr>
+                  <td>Americas</td>
+                  <td>$ 8500</td>
+                </tr>
+                <tr>
+                  <td>Iserra 100</td>
+                  <td>$ 9000</td>
+                </tr>
+                <tr>
+                  <td>Palatino</td>
+                  <td>$ 10000</td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+        <div class="col-sm-4">
+          <form id="nuevoRegistro">
+            <div class="form-group">
+              <label for="teatro">Nombre del Teatro</label>
+              <input type="text" class = "form-control" id="teatro"/>
+            </div>
+            <div class="form-group">
+              <label for="cantidad">Cantidad</label>
+              <input type="text" class = "form-control" id="cantidad"/>
+            </div>
+            <div class="form-group">
+              <label for="precio">Precio</label>              
+              <input type="text" class = "form-control" id="precio"/>
+            </div>
+            <input type="submit" value="Añadir Registro"/>
+          </form>
+        </div>
+        <div class="col-sm-4">
+          <div id="tablaVentas">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Teatro</th>
+                  <th>Unidades</th>
+                  <th>Valor Total</th>
+                </tr>
+              </thead>
+              <tbody id="registroVenta">
+              </tbody>
+            </table>
+          </div>
+          <button id="btntabla">
+            Mostrar registro ventas
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="ventas.js"></script>
+  </body>
+</html>
+
+
+<!-- function algoritmo() {
+        let clientes_atendidos;
+        let total_de_la_compra, total_de_ventas;
+        total_de_la_compra = parseFloat(
+          document.formulario1.total_de_la_compra.value
+        );
+        total_de_ventas = total_de_ventas + total_de_la_compra;
+        clientes_atendidos = clientes_atendidos + 1;
+        alert(clientes_atendidos);
+      } -->
