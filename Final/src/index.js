@@ -1,17 +1,5 @@
 import { teatros } from "./teatros";
 
-function validar() {
-  var usuario = document.getElementById("usuario").value;
-  var Contraseña = document.getElementById("pass").value;
-  
-  if (usuario == "admin" && Contraseña == "1234") {
-    //alert("Usuario y Contraseña validos");
-    window.location = "ventas.html";
-  } else {
-    alert("Verifique sus credenciales");
-  }
-}
-
 const availableTeatros = Object.keys(teatros);
 const targetTeatro = prompt(
   `¿En que teatro quiere comprar su boleta? ${availableTeatros}`
