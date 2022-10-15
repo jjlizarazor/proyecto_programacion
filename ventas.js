@@ -24,7 +24,7 @@ function mostrarTabla(){
         tablallena +=         
         "<tr><td>" 
         + tabla[i].compra
-        + "</td><td>" 
+        + "</td><td>"
         + tabla[i].precio 
         + "</td></tr>";
     }
@@ -35,7 +35,10 @@ function mostrarTabla(){
 function nuevoRegistro(event){
     event.preventDefault();
 
-    var registro = { compra: "Compra4" , precio: "Precio4" };
+    var compraIntroducidaPorAdmin = document.getElementById("compra").Value;
+    var precioIntroducidaPorAdmin = document.getElementById("precio").Value;
+
+    var registro = { compra: compraIntroducidaPorAdmin, precio: precioIntroducidaPorAdmin };
     tabla.push(registro);
 }
 /*
