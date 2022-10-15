@@ -10,28 +10,63 @@
     <meta charset="utf-8" />
   </head>
   <body>
+    <br>
     <div class="container">
+      <br><br>
       <div class="row">
-        <div class="col-sm-6">
-          <form>
+        <div class="col-sm-4">
+          <table class="table">
+              <thead>
+                <tr>
+                  <th>Teatro</th>
+                  <th>Precio Unidad</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Imperial</td>
+                  <td>$ 8000</td>
+                </tr>
+                <tr>
+                  <td>Americas</td>
+                  <td>$ 8500</td>
+                </tr>
+                <tr>
+                  <td>Iserra 100</td>
+                  <td>$ 9000</td>
+                </tr>
+                <tr>
+                  <td>Palatino</td>
+                  <td>$ 10000</td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+        <div class="col-sm-4">
+          <form id="nuevoRegistro">
             <div class="form-group">
-              <label>Compra</label>
-              <input type="text" id="compra"/>
+              <label for="teatro">Nombre del Teatro</label>
+              <input type="text" class = "form-control" id="teatro"/>
             </div>
             <div class="form-group">
-              <label>Precio</label>              
-              <input type="text" id="precio"/>
+              <label for="cantidad">Cantidad</label>
+              <input type="text" class = "form-control" id="cantidad"/>
             </div>
-            <input type="submit" value="Añadir Registro" id="btnRegistro"/>
+            <div class="form-group">
+              <label for="precio">Precio</label>              
+              <input type="text" class = "form-control" id="precio"/>
+            </div>
+            <input type="submit" value="Añadir Registro"/>
           </form>
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-4">
           <div id="tablaVentas">
             <table class="table">
               <thead>
                 <tr>
-                  <th>Usuario</th>
-                  <th>Venta</th>
+                  <th>Teatro</th>
+                  <th>Unidades</th>
+                  <th>Valor Total</th>
                 </tr>
               </thead>
               <tbody id="registroVenta">

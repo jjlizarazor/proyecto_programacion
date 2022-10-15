@@ -1,19 +1,17 @@
 /*import { teatros } from "./teatros"
-*/
+
+var teatrosDisponibles = Object.keys(teatros);
+var targetTeatro = prompt(`¿Qué teatro elige? ${teatrosDisponibles}`);*/
 
 var tabla = 
-[
-    {compra:"Compra1", precio:"$ 1000"},
-    {compra:"Compra2", precio:"$ 2000"},
-    {compra:"Compra3", precio:"$ 3000"}
-]
+[]
 
 window.onload = cargarEventos;
 
 function cargarEventos(){
     document.getElementById("btntabla").addEventListener("click", mostrarTabla, false);
 
-    document.getElementById("btnRegistro").addEventListener("submit", nuevoRegistro, false);
+    document.getElementById("nuevoRegistro").addEventListener("submit", nuevoRegistro, false);
 }
 
 function mostrarTabla(){
@@ -23,9 +21,11 @@ function mostrarTabla(){
     for (var i = 0; i < tabla.length; i++) {
         tablallena +=         
         "<tr><td>" 
-        + tabla[i].compra
-        + "</td><td>" 
-        + tabla[i].precio 
+        + tabla[i].teatro
+        + "</td><td>"
+        + tabla[i].cantidad
+        + "</td><td>$ " 
+        + tabla[i].precio
         + "</td></tr>";
     }
 
@@ -34,10 +34,14 @@ function mostrarTabla(){
 
 function nuevoRegistro(event){
     event.preventDefault();
+    const registroTeatro = document.getElementById("teatro").value;
+    const registroCantidad = document.getElementById("cantidad").value;
+    const registroPrecio = document.getElementById("precio").value;
 
-    var registro = { compra: "Compra4" , precio: "Precio4" };
-    tabla.push(registro);
+    var registroAgregado = {teatro: registroTeatro, cantidad: registroCantidad, precio: registroPrecio*registroCantidad};
+    tabla.push(registroAgregado);
 }
+
 /*
 cant personas 
 tarifa localidad
